@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+require current(array_filter([
+    __DIR__ . "/../vendor/autoload.php",
+    __DIR__ . "/../../../autoload.php",
+], 'realpath'));
+
+set_error_handler(function ($severity, $message, $file, $line) {
+    throw new ErrorException($message, 0, $severity, $file, $line);
+});
+
+Sqlia\Sqlia::setup()->run();

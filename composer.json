@@ -1,0 +1,35 @@
+{
+    "name": "sqlia/sqlia",
+    "description": "In-memory MySQL controller",
+    "keywords": ["memory", "mysql", "testing"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jordan Pittman",
+            "email": "jpittman@thecargoagency.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.7",
+        "mnapoli/silly": "~1.0",
+        "symfony/process": "~3.0",
+        "illuminate/container": "~5.2",
+        "illuminate/support": "~5.2"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Sqlia\\": "src/"
+        }
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.3"
+    },
+    "bin": [
+        "bin/sqlia"
+    ]
+}
