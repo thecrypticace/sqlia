@@ -14,8 +14,8 @@
         "php": ">=7.0.7",
         "mnapoli/silly": "~1.0",
         "symfony/process": "~3.0",
-        "illuminate/container": "~5.2",
-        "illuminate/support": "~5.2"
+        "tightenco/collect": "~5.2",
+        "illuminate/container": "~5.2"
     },
     "autoload": {
         "files": [
