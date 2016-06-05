@@ -18,6 +18,7 @@ class Manager
     {
         return array_map([$this->container, "make"], [
             MySQL::class,
+            Postgres::class,
         ]);
     }
 
