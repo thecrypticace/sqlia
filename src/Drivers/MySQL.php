@@ -2,6 +2,8 @@
 
 namespace Sqlia\Drivers;
 
+use Sqlia\Environments\MacOS;
+
 class MySQL extends AbstractDriver
 {
     public function name() : string
@@ -28,6 +30,10 @@ class MySQL extends AbstractDriver
         output($this->cli->run("mkdir -p {$path}/data"));
 
         $owner = "mysql:root";
+
+        if ($this->env instanceof MacOS) {
+            $owner = "mysql:wheel";
+        }
 
         output($this->cli->asRoot()->run("chown -R {$owner} {$path}"));
         $this->cli->as("mysql")->run("mysql_install_db --user=mysql --datadir={$path}/data");
