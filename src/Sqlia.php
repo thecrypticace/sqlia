@@ -9,7 +9,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class Sqlia
 {
-    const VERSION = "1.0.0";
+    const VERSION = "0.0.0";
 
     private $app;
     private $container;
