@@ -4,7 +4,7 @@ namespace Sqlia\Console;
 
 class Refresh extends AbstractCommand
 {
-    public $signature = "refresh driver [--port=] [--username=] [--password=] [--database=]*";
+    public $signature = "refresh driver [database]* [--port=] [--username=] [--password=]";
     public $description = "Drop & recreate the specified databases";
 
     public function handle($quiet, $driver, $port, $username, $password, $database = [])
@@ -39,9 +39,9 @@ class Refresh extends AbstractCommand
         return [
             "driver" => "The driver to start",
             "--port" => "The port to start the driver on",
+            "database" => "A list of databases to (re)create",
             "--username" => "The database user to create",
             "--password" => "The password for the user",
-            "--database" => "A database to create on startup",
         ];
     }
 }

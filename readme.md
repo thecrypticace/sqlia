@@ -23,10 +23,10 @@ You may also provide a different username (default: `sqlia`) and password (defau
 ### Creating or re-creating databases
 
 To create a database you may run the following command. It will drop the database if it already exists.
-`./bin/sqlia refresh mysql --database=sqlia`
+`./bin/sqlia refresh mysql sqlia`
 
 You may provide more than one database like so:
-`./bin/sqlia refresh mysql --database=one --database=two --database=three`
+`./bin/sqlia refresh mysql one two three`
 
 ### Stopping Sqlia
 `./bin/sqlia stop mysql`
