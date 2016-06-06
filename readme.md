@@ -33,6 +33,8 @@ You may provide more than one database like so:
 
 ## Todo
 - Postgres support
+- Use PDO for running all queries
 - Running multiple database servers at the same time
 - `kill` command to forcefully kill the running database server
 - `cleanup` command to ensure there are no leftovers if an error occurs
+- `console` command to drop you into the database's console (if available)
