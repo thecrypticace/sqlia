@@ -2,7 +2,7 @@
 
 # Sqlia
 
-Sqlia is a tool that allows you to run an temporary, in-memory version of MySQL on Linux or OS X. This would be primarily useful for testing where you may need to test against a real database server. Note: Sqlia is NOT for production use. It is a testing tool only.
+Sqlia is a tool that allows you to run a temporary, in-memory version of MySQL on Linux or OS X. This would be primarily useful for testing where you may need to test against a real database server. Note: Sqlia is NOT for production use. It is a testing tool only.
 
 ## System Requirements
 - OS X 10.11 or Ubuntu 14.04 LTS (others may work but have not been tested)
@@ -14,7 +14,7 @@ Sqlia is a tool that allows you to run an temporary, in-memory version of MySQL 
 ### Starting Sqlia
 `./bin/sqlia start mysql`
 
-You may provide an different port number than the default of 3344:
+You may provide a different port number than the default of 3344:
 `./bin/sqlia start mysql --port=3366`
 
 You may also provide a different username (default: `sqlia`) and password (default: `sqlia`) to use for the database user:
