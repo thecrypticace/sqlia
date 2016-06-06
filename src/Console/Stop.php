@@ -2,6 +2,8 @@
 
 namespace Sqlia\Console;
 
+use function Sqlia\warning;
+
 class Stop extends AbstractCommand
 {
     public $signature = "stop driver";

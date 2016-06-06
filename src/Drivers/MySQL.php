@@ -4,6 +4,11 @@ namespace Sqlia\Drivers;
 
 use Sqlia\Environments\MacOS;
 
+use function Sqlia\info;
+use function Sqlia\output;
+use function Sqlia\comment;
+use function Sqlia\warning;
+
 class MySQL extends AbstractDriver
 {
     public function name() : string

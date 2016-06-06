@@ -3,6 +3,7 @@
 namespace Sqlia\Cli;
 
 use Symfony\Component\Process\Process;
+use function Sqlia\warning;
 
 class Command
 {

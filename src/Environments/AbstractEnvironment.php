@@ -5,6 +5,7 @@ namespace Sqlia\Environments;
 use Closure;
 use Sqlia\Cli\Cli;
 use Illuminate\Container\Container;
+use function Sqlia\comment;
 
 abstract class AbstractEnvironment implements Environment
 {

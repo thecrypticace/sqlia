@@ -2,6 +2,8 @@
 
 namespace Sqlia\Console;
 
+use function Sqlia\output;
+
 class Supported extends AbstractCommand
 {
     public $signature = "supported [driver]";

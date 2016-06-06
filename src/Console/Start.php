@@ -2,6 +2,8 @@
 
 namespace Sqlia\Console;
 
+use function Sqlia\warning;
+
 class Start extends AbstractCommand
 {
     public $signature = "start driver [--port=] [--username=] [--password=]";

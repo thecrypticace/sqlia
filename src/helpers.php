@@ -1,5 +1,7 @@
 <?php
 
+namespace Sqlia;
+
 use Illuminate\Container\Container;
 use Symfony\Component\Console\Output\OutputInterface;
 

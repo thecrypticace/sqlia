@@ -2,6 +2,8 @@
 
 namespace Sqlia\Console;
 
+use function Sqlia\warning;
+
 class Refresh extends AbstractCommand
 {
     public $signature = "refresh driver [database]* [--port=] [--username=] [--password=]";

@@ -2,6 +2,8 @@
 
 namespace Sqlia\Console;
 
+use function Sqlia\output;
+
 class Status extends AbstractCommand
 {
     public $signature = "status [driver]";

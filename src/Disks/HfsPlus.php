@@ -2,6 +2,8 @@
 
 namespace Sqlia\Disks;
 
+use function Sqlia\output;
+
 class HfsPlus extends AbstractDisk
 {
     public function mounted($options = []) : bool
