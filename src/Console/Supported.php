@@ -16,7 +16,7 @@ class Supported extends AbstractCommand
             : $this->drivers->all();
 
         foreach ($drivers as $driver) {
-            output("{$driver->name()}: " . ($driver->supported() ? "<info>✓</info>" : "<fg=yellow>✗</>"));
+            output("{$driver->name()}: " . ($driver->supported() ? "<info>supported</info>" : "<fg=yellow>unsupported</>"));
         }
 
         output("");

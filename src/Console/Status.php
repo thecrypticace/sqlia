@@ -16,7 +16,7 @@ class Status extends AbstractCommand
             : $this->drivers->all();
 
         foreach ($drivers as $driver) {
-            output("{$driver->name()}: " . ($driver->running() ? "<info>✓</info>" : "<fg=yellow>✗</>"));
+            output("{$driver->name()}: " . ($driver->running() ? "<info>running</info>" : "<fg=yellow>not running</>"));
         }
 
         output("");
