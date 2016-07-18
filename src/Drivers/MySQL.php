@@ -87,6 +87,9 @@ class MySQL extends AbstractDriver
         $this->query("root", $port, "root", "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';");
 
         info("Adding user “{$username}” with password “{$password}”...");
+        $this->query("root", $port, "root", "GRANT ALL PRIVILEGES ON *.* TO '{$username}'@'localhost' IDENTIFIED BY '{$password}';");
+        $this->query("root", $port, "root", "GRANT ALL PRIVILEGES ON *.* TO '{$username}'@'127.0.0.1' IDENTIFIED BY '{$password}';");
+        $this->query("root", $port, "root", "GRANT ALL PRIVILEGES ON *.* TO '{$username}'@'::1' IDENTIFIED BY '{$password}';");
         $this->query("root", $port, "root", "GRANT ALL PRIVILEGES ON *.* TO '{$username}'@'%' IDENTIFIED BY '{$password}';");
         $this->query("root", $port, "root", "FLUSH PRIVILEGES;");
     }
