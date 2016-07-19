@@ -41,7 +41,16 @@ class MySQL extends AbstractDriver
         }
 
         output($this->cli->asRoot()->run("chown -R {$owner} {$path}"));
-        $this->cli->as("mysql")->run("mysql_install_db --user=mysql --datadir={$path}/data");
+
+        // Check MySQL version
+        preg_match("/Distrib (.*),/", $this->cli->run("mysql --version"), $matches);
+        $version = $matches[1];
+
+        if (version_compare($version, "5.7.6", ">=")) {
+            $this->cli->as("mysql")->run("mysqld --initialize-insecure --basedir={$path} --datadir={$path}/data");
+        } else {
+            $this->cli->as("mysql")->run("mysql_install_db --user=mysql --datadir={$path}/data");
+        }
     }
 
     public function uninstall()
